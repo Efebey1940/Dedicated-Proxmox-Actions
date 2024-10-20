@@ -1,0 +1,16 @@
+name: SSH
+
+on: 
+  workflow_dispatch:
+ 
+jobs:
+  win11:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Docker
+        uses: crazy-max/ghaction-setup-docker@v3.3.0
+
+      - name: Install tmate and run it
+        run: |
