@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
  
 jobs:
-  win11:
+  tmate:
     runs-on: debian:bookworm
     steps:
       - uses: actions/checkout@v4
