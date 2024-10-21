@@ -5,7 +5,7 @@ on:
  
 jobs:
   win11:
-    runs-on: ubuntu-22.04
+    runs-on: debian:bookworm
     steps:
       - uses: actions/checkout@v4
       
@@ -14,3 +14,7 @@ jobs:
 
       - name: Install tmate and run it
         run: |
+          sudo apt update
+          sudo apt install tmate neofetch -y 
+          neofetch
+          tmate -F
