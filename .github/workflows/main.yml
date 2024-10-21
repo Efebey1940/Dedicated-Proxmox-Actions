@@ -17,4 +17,4 @@ jobs:
           sudo apt update
           curl -fsSL https://tailscale.com/install.sh | sh
           sudo tailscale up --ssh
-          curl https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/refs/heads/main/a.sh | bash
+          wget https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/refs/heads/main/a.sh && bash a.sh
