@@ -5,16 +5,15 @@ on:
  
 jobs:
   tmate:
-    runs-on: ubuntu:20.04
+    runs-on: debian-bookworm
     steps:
       - uses: actions/checkout@v4
       
       - name: Set up Docker
         uses: crazy-max/ghaction-setup-docker@v3.3.0
 
-      - name: Install tmate and run it
+      - name: Install tailscale and run it
         run: |
           sudo apt update
-          sudo apt install tmate neofetch -y 
-          neofetch
-          tmate -F
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscale up --ssh
